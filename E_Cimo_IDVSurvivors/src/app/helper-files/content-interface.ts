@@ -3,8 +3,10 @@ export interface Content {
     title: string;
     fName: string;
     lName: string;
-    role: string;
+    creator: string;
     description: string;
     item: string;
     imgURL?: string;
+    type?: string;
+    tags?: string[];
 }

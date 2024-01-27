@@ -1,26 +1,33 @@
 import { Content } from './content-interface'
 
 export class ContentList {
-    private _content: Content[];
+    private contentArray: Content[];
 
     constructor() {
-        this._content = [];
+        this.contentArray = [];
     }
 
-    get content(): Content[] {
-        return this._content;
+    get contentArrayGet(): Content[] {
+        return this.contentArray;
     }
 
     addContentItem(contentItem: Content): void {
-        this._content.push(contentItem);
+        this.contentArray.push(contentItem);
     }
 
-    itemCount<T>(_content: Content[]): number {
-        return this._content.length;
+    itemCount(): number {
+        return this.contentArray.length;
     }
 
-    getContentHTML(i:number): string {
-        let contentItem:Content = this._content[i];
-        return '<p>' + contentItem.description + '</p>' + contentItem.id + '<img url="' + contentItem.imgURL + '"></img>';
+    getInnerHTML(i:number): string {
+        let contentItem:Content = this.contentArray[i];
+        return `<div>
+                <h2>${contentItem.title}</h2>
+                <img src="${contentItem.imgURL}" alt=${contentItem.title}>
+                <h3>${contentItem.fName} ${contentItem.lName}</h3>
+                <p>Description: ${contentItem.description}</p>
+                <p>Type: ${contentItem.type}</p>
+                <p>Item: ${contentItem.item}</p>
+                <p>Creator: ${contentItem.creator}</p>`;
     }
 }
