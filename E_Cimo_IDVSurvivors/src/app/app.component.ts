@@ -14,7 +14,7 @@ import { Content } from './helper-files/content-interface';
 export class AppComponent {
   title = 'E_Cimo_IDVSurvivors';
 
-  _content: Content[];
+  contentArray: Content[];
 
   constructor() {
   }

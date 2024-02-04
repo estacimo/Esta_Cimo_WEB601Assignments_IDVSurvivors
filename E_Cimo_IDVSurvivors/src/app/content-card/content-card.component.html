@@ -1,4 +1,20 @@
-<section class="body" [innerHTML]="contentList.getInnerHTML(0)"></section>
+<!-- <section class="body" [innerHTML]="contentList.getInnerHTML(0)"></section>
 <section class="body" [innerHTML]="contentList.getInnerHTML(1)"></section>
-<section class="body" [innerHTML]="contentList.getInnerHTML(2)"></section>
+<section class="body" [innerHTML]="contentList.getInnerHTML(2)"></section> -->
+
+<div [style.border]="getBorderStyle()">
+    <h3>{{ Content.title }}</h3>
+    <img [src]="Content.imgURL" (click)="showDetails()"/>
+    
+    <p [innerHTML]="Content.description"></p>
+    
+    <p>Creator: {{ Content.creator }}</p>
+    
+    <p>Type: {{ Content.type }}</p>
+    
+    <div *ngFor="let tag of Content.tags">
+      Tags: {{ tag }}<br>
+    </div>
+  </div>
+  
 
