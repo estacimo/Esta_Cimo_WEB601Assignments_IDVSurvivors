@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { Content } from '../helper-files/content-interface';
 import { ContentCardComponent } from '../content-card/content-card.component';
 import { RouterOutlet } from '@angular/router';
+import { TypeFilterPipe } from '../type-filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, RouterOutlet],
+  imports: [CommonModule, ContentCardComponent, RouterOutlet, TypeFilterPipe, FormsModule ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
@@ -61,7 +63,7 @@ export class ContentListComponent {
       creator: "Identity V",
       description: "Servais Le Roy, also known as the Magician, is a Contain-Type and Difficulty 2 Survivor available for purchase after completion of the prologue. He is one of 43 playable Survivors added to Identity V.",
       item: "Decoy",
-      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1203529390328127569/115.png?ex=65d16d17&is=65bef817&hm=daf981d67be01bf4fc74b9a0d92730007226f7439dd554b32b7337e93b40dac5&",
+      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1206081643123834960/latest.png?ex=65dab60f&is=65c8410f&hm=4e2fb9a89bec23b8bba9728c88bf0012ca4d4b6ac0764572b776412690a49feb&",
       type: "Contain",
       tags: ["Magician", "Contain"]
     },
@@ -74,7 +76,7 @@ export class ContentListComponent {
       creator: "Identity V",
       description: "Naib Subedar or नायब सुभेदार, also known as the Mercenary, is a Rescue-Type and Difficulty 1.5 Survivor available for purchase after completion of the prologue. He is one of 43 playable Survivors added to Identity V.",
       item: "Elbow Pads",
-      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1203530462581227520/115.png?ex=65d16e16&is=65bef916&hm=a54b0c7671a5f4ddac99dddb82c71ad2dfa799d9b48a10009da27f99cfe9b538&",
+      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1206081812011552779/latest.png?ex=65dab637&is=65c84137&hm=6ed3bd4c7a476b36d4e33e69a2bcd81d584e3adc92eaff84031d9f0c7425a326&",
       type: "Rescuer",
       tags: ["Mercenary", "Rescuer"]
     },
@@ -87,11 +89,37 @@ export class ContentListComponent {
       creator: "Identity V",
       description: "William Webb Ellis or William Ellis, also known as the Forward, is an Assist/Rescue Hybrid Type and Difficulty 3 Survivor available for purchase after completion of the prologue. He is one of 43 playable Survivors added to Identity V.",
       item: "Rugby Ball",
-      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1203530994070855680/115.png?ex=65d16e95&is=65bef995&hm=25d2cfd8d5f74c1d2eb78787ec3d076ce9b0fa6c3a2639cdc0c726e155e0fdb1&",
+      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1206082000461766666/latest.png?ex=65dab664&is=65c84164&hm=5084828f9163b08e4ca309113409dbfd4c805917d6a6ad98695950e0bd795cd5&",
       type: "Rescuer",
       tags: ["Forward", "Rescuer", "Support"]
+    },
+
+    {
+      id: 7,
+      title: "Stranger B",
+      fName: "Unknown",
+      lName: "Unknown",
+      creator: "Identity V",
+      description: "Stranger B, also referred to as Stranger 2, is a cut Survivor planned for implementation during the early development phase of Identity V, but ultimately scrapped before the game's official release.",
+      item: "Syringe",
+      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1206049409134108682/latest.png?ex=65da980a&is=65c8230a&hm=d9f539d40af8a8660b3701ea12741f58a58d95ab4f5609c1eb3c6241635299cb&",
+      tags: ["Stranger B"]
     }
+
   ];
+
+  filterContent: Content[] = [];
+  title:string = '';
+  message: string = '';
+  isFound: boolean = false;
+
+  checkTitle(){
+    this.filterContent = this.contentArray.filter(contentItem => contentItem.title.toLowerCase() === this.title.toLowerCase());
+
+    this.isFound = this.filterContent.length > 0;
+    
+    this.message = this.isFound ? `Content with title '${this.title}' found.` : `Content with title '${this.title}' not found.`;
+  }
 
   constructor() {
     

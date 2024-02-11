@@ -2,7 +2,7 @@
 <section class="body" [innerHTML]="contentList.getInnerHTML(1)"></section>
 <section class="body" [innerHTML]="contentList.getInnerHTML(2)"></section> -->
 
-<div class="card" [style.border]="content.id === 1 ? '2px solid black' : '1px solid pink'">
+<div class="card">
   <h3 class="heading">{{ content.title }}</h3>
   
   <img class="img" [src]="content.imgURL" (click)="showDetails()"/>

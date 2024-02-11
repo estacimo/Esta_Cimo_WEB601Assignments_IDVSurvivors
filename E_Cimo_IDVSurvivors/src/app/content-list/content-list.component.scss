@@ -1,0 +1,61 @@
+h2{
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card{
+    background-color: #2a2a2d;
+}
+
+.container{
+    background-color: #121213;;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d1d1d9;
+}
+
+.input{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.message{
+    text-align: center;
+}
+
+.card-contain{
+    border: 8px groove #39807e;
+}
+
+.card-contain > h2{
+    color: #39807e;
+}
+
+.card-support{
+    border: 8px groove #6c4985;
+}
+
+.card-support > h2{
+    color: #6c4985;
+}
+
+.card-decoder{
+    border: 8px groove #9d3a3a;
+}
+
+.card-decoder > h2{
+    color: #9d3a3a;
+}
+
+.card-rescuer {
+    border: 8px groove #d28634;
+}
+
+.card-rescuer > h2{
+    color: #d28634;
+}
+
+.card-none{
+    border: 8px groove #8e8e8e;
+}

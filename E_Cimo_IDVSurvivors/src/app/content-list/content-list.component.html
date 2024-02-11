@@ -1,3 +1,37 @@
-<div>
-  <app-content-card *ngFor="let contentItem of contentArray.slice(0, 5)" [content]="contentItem"></app-content-card>
+<div class="input">
+  <input type="text" name="title" [(ngModel)]="title">
+  <button (click)="checkTitle()">Submit</button>
+</div>
+
+<p class="message" [style.color]="isFound ? 'green' : 'red'">
+  {{ message }}
+</p>
+
+<div class="container">
+ <div class="row">
+  <div class="card-contain col-sm-6 col-md-2">
+    <h2>Contain</h2>
+    <app-content-card *ngFor="let contentItem of contentArray | typeFilter:'Contain'" [content]="contentItem"></app-content-card>
+  </div>
+
+  <div class="card-support col-sm-6 col-md-2">
+    <h2>Support</h2>
+    <app-content-card *ngFor="let contentItem of contentArray | typeFilter:'Support'" [content]="contentItem"></app-content-card>
+  </div>
+
+  <div class="card-decoder col-sm-6 col-md-2">
+    <h2>Decoder</h2>
+    <app-content-card *ngFor="let contentItem of contentArray | typeFilter:'Decoder'" [content]="contentItem"></app-content-card>
+  </div>
+
+  <div class="card-rescuer col-sm-6 col-md-2">
+    <h2>Rescuer</h2>
+    <app-content-card *ngFor="let contentItem of contentArray | typeFilter:'Rescuer'" [content]="contentItem"></app-content-card>
+  </div>
+
+  <div class="card-none col-sm-6 col-md-2">
+    <h2>No Type</h2>
+    <app-content-card *ngFor="let contentItem of contentArray | typeFilter:''" [content]="contentItem"></app-content-card>
+  </div>
+ </div> 
 </div>

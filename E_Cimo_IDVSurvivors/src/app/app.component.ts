@@ -13,5 +13,5 @@ import { ContentListComponent } from './content-list/content-list.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'E_Cimo_IDVSurvivors';
+  title = 'Identity V Survivors';
 }
