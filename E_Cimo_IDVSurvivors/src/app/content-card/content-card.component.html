@@ -2,19 +2,22 @@
 <section class="body" [innerHTML]="contentList.getInnerHTML(1)"></section>
 <section class="body" [innerHTML]="contentList.getInnerHTML(2)"></section> -->
 
-<div [style.border]="getBorderStyle()">
-    <h3>{{ Content.title }}</h3>
-    <img [src]="Content.imgURL" (click)="showDetails()"/>
-    
-    <p [innerHTML]="Content.description"></p>
-    
-    <p>Creator: {{ Content.creator }}</p>
-    
-    <p>Type: {{ Content.type }}</p>
-    
-    <div *ngFor="let tag of Content.tags">
-      Tags: {{ tag }}<br>
+<div class="card" [style.border]="content.id === 1 ? '2px solid black' : '1px solid pink'">
+  <h3 class="heading">{{ content.title }}</h3>
+  
+  <img class="img" [src]="content.imgURL" (click)="showDetails()"/>
+  
+  <div class="container">
+    <p>Description: {{ content.description }}</p>
+   
+    <p>Creator: {{ content.creator }}</p>
+   
+    <p>Type: {{ content.type }}</p>
+   
+    <div>Tags: 
+      <div class="list" *ngFor="let tag of content.tags">
+        {{tag}}
+      </div>
     </div>
   </div>
-  
-
+</div>
