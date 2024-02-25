@@ -23,7 +23,7 @@ export class ContentListComponent {
       creator: "Identity V",
       description: "Emma Woods (formerly Lisa Beck), also known as the Gardener, is a Contain/Assist Type and Difficulty 1 Default Survivor unlocked after finishing the prologue. She is one of 43 playable Survivors added to Identity V.",
       item: "Toolbox",
-      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1200873054251798568/gardener.png?ex=65c7c32f&is=65b54e2f&hm=2bd600a424df840e7ecf7e254e782ae56892f470aa384b847d9293593d312608&",
+      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1200873054251798568/gardener.png?ex=65ecad2f&is=65da382f&hm=c59839c4000966706d78307df157571eb109425e267f202b5923137e9d72cc16&",
       type: "Contain",
       tags: ["Gardener", "Contain", "Support"]
 
@@ -37,7 +37,7 @@ export class ContentListComponent {
       creator: "Identity V",
       description: "Emily Dyer (formerly Lydia Jones), also known as the Doctor, is a Contain/Assist Hybrid Type and Difficulty 1 Default Survivor unlocked after finishing the prologue. She is one of 43 playable Survivors added to Identity V.",
       item: "Syringe",
-      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1200874965789069342/doctor.png?ex=65c7c4f7&is=65b54ff7&hm=a1ee955b4ee91419fb63ea354b85d96fec529b41dfd03c97d532a4e3bd407ec0&",
+      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1200874965789069342/doctor.png?ex=65ecaef7&is=65da39f7&hm=3f6f01b365df5dbf355668909acf08a77b284c6e65d8034c89efeb6102cb01e8&",
       type: "Support",
       tags: ["Doctor", "Support", "Contain"]
     },
@@ -50,7 +50,7 @@ export class ContentListComponent {
       creator: "Identity V",
       description: "Tracy Reznik, also known as the Mechanic, is a Decode-Type and Difficulty 2 Survivor available for purchase after completion of the prologue. She is one of 43 playable Survivors added to Identity V.",
       item: "Controller",
-      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1200874986026586192/mechanic.png?ex=65c7c4fb&is=65b54ffb&hm=66f393a5dd7983282d261925ba5a7a5efb7c2fab0f8742e0208fca8fc63f8da0&",
+      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1200874986026586192/mechanic.png?ex=65ecaefb&is=65da39fb&hm=33cf4e0aa4b043117a0937c176e14b06c7ca77bd9499213381db5a7c3d70015f&",
       type: "Decoder",
       tags: ["Mechanic", "Decoder"]
     },
@@ -89,7 +89,7 @@ export class ContentListComponent {
       creator: "Identity V",
       description: "William Webb Ellis or William Ellis, also known as the Forward, is an Assist/Rescue Hybrid Type and Difficulty 3 Survivor available for purchase after completion of the prologue. He is one of 43 playable Survivors added to Identity V.",
       item: "Rugby Ball",
-      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1206082000461766666/latest.png?ex=65dab664&is=65c84164&hm=5084828f9163b08e4ca309113409dbfd4c805917d6a6ad98695950e0bd795cd5&",
+      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1206082000461766666/latest.png?ex=65e3f0e4&is=65d17be4&hm=8fda90e24b9bd747787bb0c6aa7d9762851b8917af0aaf5ad2fb700b8bf65e9e&",
       type: "Rescuer",
       tags: ["Forward", "Rescuer", "Support"]
     },
@@ -102,7 +102,7 @@ export class ContentListComponent {
       creator: "Identity V",
       description: "Stranger B, also referred to as Stranger 2, is a cut Survivor planned for implementation during the early development phase of Identity V, but ultimately scrapped before the game's official release.",
       item: "Syringe",
-      imgURL: "https://cdn.discordapp.com/attachments/1012354587241488447/1206049409134108682/latest.png?ex=65da980a&is=65c8230a&hm=d9f539d40af8a8660b3701ea12741f58a58d95ab4f5609c1eb3c6241635299cb&",
+      imgURL: "",
       tags: ["Stranger B"]
     }
 

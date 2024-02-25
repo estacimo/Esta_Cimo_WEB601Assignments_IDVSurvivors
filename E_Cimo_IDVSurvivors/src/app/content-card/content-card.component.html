@@ -5,17 +5,21 @@
 <div class="card">
   <h3 class="heading">{{ content.title }}</h3>
   
-  <img class="img" [src]="content.imgURL" (click)="showDetails()"/>
+  <img class="img" *ngIf="content.imgURL; else defaultImg" [src]="content.imgURL" (click)="showDetails()"/>
+
+  <ng-template #defaultImg>
+    <img [src]="" (click)="showDetails()" />
+  </ng-template>
   
   <div class="container">
     <p>Description: {{ content.description }}</p>
    
     <p>Creator: {{ content.creator }}</p>
    
-    <p>Type: {{ content.type }}</p>
+    <p appHoverAffect typeStyle="textDecoration">Type: {{ content.type }}</p>
    
     <div>Tags: 
-      <div class="list" *ngFor="let tag of content.tags">
+      <div class="list" *ngFor="let tag of content.tags" appHoverAffect tagStyle="fontWeight">
         {{tag}}
       </div>
     </div>
